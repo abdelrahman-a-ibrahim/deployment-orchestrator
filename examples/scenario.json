@@ -1,0 +1,6 @@
+{
+  "release_id": "release-demo-01",
+  "artifact_digest": "sha256:synthetic-not-a-real-image",
+  "staging_passed": false,
+  "approved": false
+}
