@@ -1,28 +1,22 @@
 # ADR 0001: System boundaries and implementation approach
 
-Status: proposed / decision not yet made.
+Status: proposed.
 
 ## Context
-Design delivery for WorkshopHub so the same tested artifact moves through staging and a lab production environment. A deployment is a traceable change with verification and recovery.
+A release-engineering project for building once and promoting the same immutable artifact across environments. It treats verification, deployment identity, approval, release traceability and rollback compatibility as first-class concerns.
 
-## Decision questions
+## Questions
 - Push deployment versus GitOps promotion
 - Artifact provenance and promotion gates
 - Rollback versus forward fix
 
-## Options
-1. Small local implementation with synthetic adapters.
-2. Integrated lab with real dependencies in a disposable environment.
-3. A justified alternative to be supplied during design.
+## Alternatives
+- A local implementation with synthetic external adapters.
+- An integrated deployment with real dependencies in an isolated environment.
+- A smaller implementation that preserves the core invariant.
 
 ## Decision
-Pending. Start by evaluating the smallest approach that can demonstrate the core invariant.
+Pending. Record the selected option, rejected alternatives and rationale before implementing external adapters.
 
-## Consequences to assess
-Correctness, complexity, cost, recovery, trust boundaries, portability and maintenance burden.
-
-## Evidence needed
-A failure experiment, a working implementation slice and a comparison of the alternatives.
-
-## Revisit when
-Document a concrete load, team, correctness or operational constraint that invalidates the selected approach.
+## Consequences
+Assess correctness, operational complexity, cost, security boundaries, recovery and maintenance. Define the concrete constraint that would justify revisiting the decision.
